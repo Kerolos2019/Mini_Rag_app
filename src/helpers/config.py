@@ -1,4 +1,4 @@
-from pydantic_settings import  BaseSettings , SettingConficDict
+from pydantic_settings import  BaseSettings , SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -7,9 +7,10 @@ class Settings(BaseSettings):
     APP_API_KEY:str
 
 
-    class config:
-        env_file=".env"
+    class Config:
+        env_file="D://Mini_Rag_app/src/.env"
 
-    def get_settings():
-        return Settings()
+def get_settings():
+
+    return Settings()
 
